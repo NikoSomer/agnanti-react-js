@@ -4,7 +4,7 @@ const Product =(props)=> (
    
         <div className="rows">
             <div className="resimage">
-                <div className="imgtxt">{props.price} €</div>
+                <div className="imgtxt">{props.price.toFixed(2)} €</div>
                
             <img src={props.img.fields.file.url} alt={props.alt} style={{width:"100%"}}/>
                 <div className="textcard"> 
