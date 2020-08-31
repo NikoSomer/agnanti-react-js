@@ -35,13 +35,16 @@ this.setState({items:response.items,foodcategoryitems:response.items.filter(item
 
 };
 
+
 componentDidMount(){
 
   setTimeout(this.getProducts, 1300);
  
 //client.getEntries().then((response) =>{this.setState({items:(response.items),foodcategoryitems:this.state.items.filter(items => items.fields.category ===this.state.category),Loading:false})}).catch(console.error);
 
+
 };  
+
 
 languageChange(e){
 
@@ -56,11 +59,13 @@ clickHandle(e){
   e.preventDefault()
 
   this.setState({foodcategoryitems:this.state.items.filter(items => items.fields.category === e.target.id),firstdraw:false})
+  window.scrollTo(0, 0);
   
     };
 
   render() {
-    
+
+     
     return ( 
   
   <React.Fragment>
